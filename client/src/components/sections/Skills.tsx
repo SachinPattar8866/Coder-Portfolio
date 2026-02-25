@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 
 export default function Skills() {
   const skills = [
-    { category: "Languages", items: ["Java", "Go", "Python", "JavaScript", "TypeScript", "C++"] },
-    { category: "Frontend", items: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Three.js", "Redux"] },
-    { category: "Backend", items: ["Node.js", "Express", "Gin", "Spring Boot", "Django", "GraphQL"] },
-    { category: "Database & Cloud", items: ["MongoDB", "PostgreSQL", "Firebase", "Redis", "AWS", "Docker"] },
+    { category: "Languages", items: ["Java", "Python", "JavaScript", "Go", "TypeScript"] },
+    { category: "Frameworks", items: ["Spring Boot", "Go (Gin)", "React.js", "Flask", "Node.js"] },
+    { category: "Databases", items: ["MySQL", "MongoDB", "PostgreSQL", "Supabase"] },
+    { category: "Tools & DevOps", items: ["Git", "GitHub", "Docker", "Postman", "JIRA", "AWS"] },
   ];
 
   const containerVariants = {
@@ -44,7 +44,6 @@ export default function Skills() {
               variants={itemVariants}
               className="glass-card rounded-3xl p-8 hover:-translate-y-2 transition-transform duration-500 group relative overflow-hidden"
             >
-              {/* Hover Gradient Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <h3 className="text-xl font-bold mb-6 font-mono border-b border-white/10 pb-4 inline-block relative z-10">

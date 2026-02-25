@@ -22,23 +22,23 @@ export default function About() {
   const highlights = [
     {
       icon: <Globe className="text-secondary w-8 h-8" />,
-      title: "Web Development",
-      description: "Building responsive, performant, and accessible web applications.",
+      title: "Full Stack",
+      description: "Building end-to-end applications with modern tech stacks.",
     },
     {
       icon: <Cpu className="text-primary w-8 h-8" />,
-      title: "AI Integration",
-      description: "Leveraging LLMs and machine learning to build smart products.",
+      title: "AI & ML",
+      description: "Developing intelligent systems and predictive models.",
     },
     {
       icon: <Code2 className="text-green-400 w-8 h-8" />,
-      title: "Clean Architecture",
-      description: "Writing maintainable, scalable, and testable code.",
+      title: "Backend",
+      description: "Designing robust APIs and scalable architectures.",
     },
     {
       icon: <Rocket className="text-orange-400 w-8 h-8" />,
-      title: "Rapid Prototyping",
-      description: "Turning ideas into functional prototypes with speed and precision.",
+      title: "Performance",
+      description: "Optimizing applications for speed and scalability.",
     }
   ];
 
@@ -63,18 +63,18 @@ export default function About() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -z-10 group-hover:bg-primary/20 transition-colors duration-700"></div>
               
               <h3 className="text-2xl font-bold mb-6 text-foreground">
-                Developer, Thinker, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Innovator</span>
+                Developer, Student, <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Engineer</span>
               </h3>
               
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Hello! I'm Sachin, a passionate Full Stack Developer who enjoys building things that live on the internet. My interest in web development started back in 2018 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS taught me a lot about design and structure!
+                  I'm a final-year B.E student in Information Science and Engineering at BLDEACET, Vijayapura. My journey in tech started with a Diploma in Computer Science, and I've since developed a deep passion for building robust full-stack applications.
                 </p>
                 <p>
-                  Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
+                  I specialize in languages like Java, Go, and Python, and I love working with frameworks like Spring Boot, Gin, and React. My experience ranges from building AI-powered medical prediction systems to full-stack music streaming clones.
                 </p>
                 <p>
-                  I also recently started diving into the world of AI and Machine Learning, exploring how LLMs can be integrated into everyday web applications to enhance user experience.
+                  I'm constantly sharpening my skills through problem-solving—having solved 90+ DSA questions on LeetCode—and exploring the latest in AI and full-stack development.
                 </p>
               </div>
             </motion.div>

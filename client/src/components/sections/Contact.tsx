@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin } from "lucide-react";
+import { Send, Mail, Github, Linkedin, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -11,7 +11,6 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
@@ -61,18 +60,20 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground font-mono">Email</p>
-                    <a href="mailto:hello@sachin.dev" className="text-foreground font-medium hover:text-primary transition-colors">hello@sachin.dev</a>
+                    <a href="mailto:pattarsachin10@gmail.com" className="text-foreground font-medium hover:text-primary transition-colors">pattarsachin10@gmail.com</a>
                   </div>
                 </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full glass flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground font-mono">Location</p>
-                    <p className="text-foreground font-medium">San Francisco, CA</p>
-                  </div>
+
+                <div className="flex gap-4 pt-4">
+                   <a href="https://github.com/SachinPattar8866" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary transition-all hover:scale-110">
+                     <Github size={20} />
+                   </a>
+                   <a href="https://linkedin.com/in/sachin-v-pattar" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-secondary transition-all hover:scale-110">
+                     <Linkedin size={20} />
+                   </a>
+                   <a href="https://leetcode.com/u/Sachin_Pattar/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary transition-all hover:scale-110">
+                     <ExternalLink size={20} />
+                   </a>
                 </div>
               </div>
             </div>
@@ -111,17 +112,6 @@ export default function Contact() {
               </div>
               
               <div className="space-y-2">
-                <label htmlFor="subject" className="text-sm font-mono text-muted-foreground">Subject</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  required
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all"
-                  placeholder="Project Inquiry"
-                />
-              </div>
-
-              <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-mono text-muted-foreground">Message</label>
                 <textarea 
                   id="message" 
@@ -135,7 +125,7 @@ export default function Contact() {
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full glass bg-primary/20 hover:bg-primary/40 border-primary/50 py-4 rounded-xl font-medium flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100"
+                className="w-full glass bg-primary/20 hover:bg-primary/40 border-primary/50 py-4 rounded-xl font-medium flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70"
               >
                 {isSubmitting ? (
                   <div className="w-6 h-6 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>

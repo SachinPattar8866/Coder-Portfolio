@@ -1,0 +1,49 @@
+SACHIN VIJAYAKUMAR PATTAR
++91 636-152-3241| pattarsachin10@gmail.com | LinkedIn | Portfolio | GitHub
+	
+OBJECTIVE
+
+Final-year BE student (ISE, 2026) with strong experience in full-stack development, backend systems, and AI-based applications. Proficient in Java, Go, Python, React, and REST APIs. Built end-to-end projects deployed with authentication, databases, ML models.
+
+EDUCATIONS
+
+BLDEACET College of Engineering Vijayapura
+Bachelor of Engineering (B.E) in Information Science  and Engineering                                            CGPA : 7.68
+Expected Graduation: 2026
+
+Government Polytechnic College Vijayapura
+Diploma in Computer Science and  Engineering                                                          CGPA : 8.23      2020-2023
+
+PROJECTS
+
+1.	Music Streaming App (YouTube Music Clone) Link
+June 2025 – Sep 2025
+•	Built a full-stack music streaming application using Spring Boot, MongoDB, React.js, and integrated the Jamendo API for music search and streaming.
+•	Implemented JWT-based authentication, user management, and playlist functionality.
+
+2.	JobGenie AI (AI-powered career assistant platform) Link
+Aug 2025 - Present
+•	Developing an AI-driven career platform with a React.js frontend and Go (Gin) backend to support resume optimization and job matching.
+•	Integrated Supabase PostgreSQL and Storage and followed an Agile, JIRA-managed workflow.
+
+3.	NeuroSense – (AI-Powered Epileptic Seizure Prediction System) Link
+Oct 2025 – Jan 2026
+•	Developed an AI-based medical system using Flask and React.js to predict epileptic seizures from EEG spectrograms.
+•	Implemented CNN and Hybrid CNN-BiLSTM models with real-time confidence visualization and PDF report generation.
+
+SKILLS
+
+Programming Languages: Java, Python, JavaScript
+Web & Frontend Technologies: HTML5, CSS3, React.js, Vite
+Backend & Frameworks: Spring Boot, Go (Gin Framework), Node.js, Python Flask
+Databases: MySQL(SQL), MongoDB, PostgreSQL (Supabase)
+Core Concepts: DSA, OOP, DBMS, SDLC, RESTful API Design, Relational and NoSQL Databases, Debugging, Functional Testing, Error Handling, Performance Optimization, Scalability, Secure Coding Practices
+Tools & Platforms: Git, GitHub, Docker Desktop, Postman, VS Code, IntelliJ IDEA, Eclipse, JIRA, XAMPP
+Operating Systems: Linux, Windows
+Cloud & DevOps: Docker, AWS, CI/CD Concepts, Cloud Deployment (Render, Netlify)
+Development Methodologies: Agile, Scrum, Sprint Planning, JIRA
+
+CERTIFICATION AND ACHIEVEMENTS
+
+	Java Course – Mastering the Fundamentals, Scaler Topics – July 2025
+	Solved 90+  DSA question on Leet Code Platform, Sachin_Pattar – Leet Code Profile

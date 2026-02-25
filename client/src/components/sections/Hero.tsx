@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Github, Linkedin, ExternalLink } from "lucide-react";
 
 export default function Hero() {
   const text = "Hi, I'm Sachin";
@@ -78,8 +78,7 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.5 }}
             className="text-lg text-muted-foreground/80 max-w-xl leading-relaxed"
           >
-            I build exceptional and accessible digital experiences for the web. 
-            Focused on bridging the gap between design and robust engineering.
+            Final-year BE student with strong experience in full-stack development, backend systems, and AI-based applications. Proficient in Java, Go, Python, React, and REST APIs.
           </motion.p>
 
           <motion.div
@@ -111,14 +110,14 @@ export default function Hero() {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="flex items-center gap-6 pt-8"
           >
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
+            <a href="https://github.com/SachinPattar8866" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
               <Github size={24} />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-secondary transition-colors hover:-translate-y-1 transform duration-300">
+            <a href="https://linkedin.com/in/sachin-v-pattar" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-secondary transition-colors hover:-translate-y-1 transform duration-300">
               <Linkedin size={24} />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
-              <Twitter size={24} />
+            <a href="https://leetcode.com/u/Sachin_Pattar/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
+              <ExternalLink size={24} />
             </a>
           </motion.div>
         </div>
@@ -130,7 +129,6 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
           className="relative hidden lg:flex justify-center items-center"
         >
-          {/* Animated Glow Behind Image */}
           <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full filter blur-[80px] opacity-40 animate-pulse"></div>
           
           <motion.div
@@ -148,7 +146,6 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Floating Badges */}
           <motion.div 
             animate={{ y: [-5, 5, -5] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -164,13 +161,11 @@ export default function Hero() {
             className="absolute bottom-20 -right-10 glass px-6 py-3 rounded-2xl flex items-center gap-3"
           >
             <span className="text-2xl">🚀</span>
-            <span className="font-medium text-sm">5+ Years Exp.</span>
+            <span className="font-medium text-sm">Solved 90+ LeetCode</span>
           </motion.div>
         </motion.div>
-
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

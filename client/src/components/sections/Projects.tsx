@@ -4,38 +4,29 @@ import { ExternalLink, Github } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
-      title: "AI-Powered CRM Dashboard",
-      description: "A comprehensive customer relationship management tool integrated with LLMs to automatically categorize leads, draft emails, and predict sales trends based on historical data.",
-      tech: ["React", "Node.js", "Python", "MongoDB", "OpenAI API"],
+      title: "NeuroSense – Epileptic Seizure Prediction",
+      description: "AI-based medical system using Flask and React.js to predict epileptic seizures from EEG spectrograms. Implemented CNN and Hybrid CNN-BiLSTM models with real-time confidence visualization and PDF report generation.",
+      tech: ["Flask", "React.js", "CNN", "BiLSTM", "ML"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
-      github: "#",
+      github: "https://github.com/SachinPattar8866",
       live: "#",
       featured: true,
     },
     {
-      title: "Decentralized Finance Tracker",
-      description: "A Web3 application allowing users to track their crypto portfolio across multiple chains, execute smart contracts, and monitor real-time gas prices.",
-      tech: ["Next.js", "Go", "Web3.js", "PostgreSQL", "Tailwind"],
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f4ec441?q=80&w=1000&auto=format&fit=crop",
-      github: "#",
-      live: "#",
-      featured: true,
-    },
-    {
-      title: "Real-time Collaboration Workspace",
-      description: "A canvas-based workspace where teams can draw, write, and plan together in real-time. Features include rich text editing, shape drawing, and video chat.",
-      tech: ["React", "Firebase", "WebRTC", "Socket.io", "Framer Motion"],
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop",
-      github: "#",
-      live: "#",
-      featured: false,
-    },
-    {
-      title: "E-Commerce Microservices",
-      description: "A scalable backend architecture for an e-commerce platform built with distinct microservices handling auth, inventory, orders, and payments.",
-      tech: ["Java", "Spring Boot", "RabbitMQ", "Redis", "Docker"],
+      title: "JobGenie AI – Career Assistant",
+      description: "AI-driven career platform with a React.js frontend and Go (Gin) backend to support resume optimization and job matching. Integrated Supabase PostgreSQL and Storage.",
+      tech: ["React.js", "Go", "Gin", "PostgreSQL", "Supabase"],
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1000&auto=format&fit=crop",
-      github: "#",
+      github: "https://github.com/SachinPattar8866",
+      live: "#",
+      featured: true,
+    },
+    {
+      title: "Music Streaming App (YouTube Music Clone)",
+      description: "Full-stack music streaming application using Spring Boot, MongoDB, React.js. Integrated Jamendo API for music search and streaming. Implemented JWT-based authentication.",
+      tech: ["Spring Boot", "MongoDB", "React.js", "Jamendo API", "JWT"],
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop",
+      github: "https://github.com/SachinPattar8866",
       live: "#",
       featured: false,
     }
@@ -63,7 +54,6 @@ export default function Projects() {
                 index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
-              {/* Project Image */}
               <div 
                 className={`lg:col-span-7 relative group rounded-2xl overflow-hidden glass border-white/10 shadow-2xl ${
                   index % 2 !== 0 ? "lg:col-start-6 lg:row-start-1" : "lg:col-start-1"
@@ -77,7 +67,6 @@ export default function Projects() {
                 />
               </div>
 
-              {/* Project Content */}
               <div 
                 className={`lg:col-span-6 relative z-20 ${
                   index % 2 !== 0 ? "lg:col-start-1 lg:row-start-1 lg:text-left" : "lg:col-start-7 lg:text-right"
@@ -106,22 +95,16 @@ export default function Projects() {
                 <div className={`flex items-center gap-6 ${
                   index % 2 !== 0 ? "justify-start" : "lg:justify-end justify-start"
                 }`}>
-                  <a href={project.github} className="text-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
                     <Github size={24} />
                   </a>
-                  <a href={project.live} className="text-foreground hover:text-secondary transition-colors hover:-translate-y-1 transform duration-300">
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-secondary transition-colors hover:-translate-y-1 transform duration-300">
                     <ExternalLink size={24} />
                   </a>
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
-        
-        <div className="mt-32 text-center">
-          <a href="#" className="glass px-8 py-4 rounded-xl font-medium inline-flex items-center gap-2 hover:bg-white/10 transition-all hover:scale-105">
-            View Archive
-          </a>
         </div>
       </div>
     </section>
