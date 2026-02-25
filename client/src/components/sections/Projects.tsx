@@ -51,12 +51,13 @@ export default function Projects() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8 }}
               className={`relative grid lg:grid-cols-12 gap-8 items-center ${
-                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+                index % 2 !== 0 ? "" : "lg:flex-row-reverse"
               }`}
             >
+              {/* Project Image */}
               <div 
                 className={`lg:col-span-7 relative group rounded-2xl overflow-hidden glass border-white/10 shadow-2xl ${
-                  index % 2 !== 0 ? "lg:col-start-6 lg:row-start-1" : "lg:col-start-1"
+                  index % 2 !== 0 ? "lg:col-start-1" : "lg:col-start-6"
                 }`}
               >
                 <div className="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500 z-10"></div>
@@ -67,9 +68,10 @@ export default function Projects() {
                 />
               </div>
 
+              {/* Project Content */}
               <div 
                 className={`lg:col-span-6 relative z-20 ${
-                  index % 2 !== 0 ? "lg:col-start-1 lg:row-start-1 lg:text-left" : "lg:col-start-7 lg:text-right"
+                  index % 2 !== 0 ? "lg:col-start-7 lg:text-right" : "lg:col-start-1 lg:text-left"
                 }`}
               >
                 <p className="text-secondary font-mono text-sm mb-2 font-medium">Featured Project</p>
@@ -77,7 +79,7 @@ export default function Projects() {
                   {project.title}
                 </h3>
                 
-                <div className="glass-card p-6 md:p-8 rounded-2xl mb-6 shadow-xl relative">
+                <div className="glass-card p-6 md:p-8 rounded-2xl mb-6 shadow-xl relative text-left">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none"></div>
                   <p className="text-muted-foreground leading-relaxed relative z-10">
                     {project.description}
@@ -85,7 +87,7 @@ export default function Projects() {
                 </div>
 
                 <ul className={`flex flex-wrap gap-4 text-sm font-mono text-muted-foreground mb-8 ${
-                  index % 2 !== 0 ? "justify-start" : "lg:justify-end justify-start"
+                  index % 2 !== 0 ? "lg:justify-end justify-start" : "justify-start"
                 }`}>
                   {project.tech.map((tech, i) => (
                     <li key={i}>{tech}</li>
@@ -93,7 +95,7 @@ export default function Projects() {
                 </ul>
 
                 <div className={`flex items-center gap-6 ${
-                  index % 2 !== 0 ? "justify-start" : "lg:justify-end justify-start"
+                  index % 2 !== 0 ? "lg:justify-end justify-start" : "justify-start"
                 }`}>
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
                     <Github size={24} />

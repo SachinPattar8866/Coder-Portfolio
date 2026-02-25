@@ -89,6 +89,8 @@
   
   html {
     scroll-behavior: smooth;
+    /* Add scroll padding to prevent sections hiding under fixed navbar */
+    scroll-padding-top: 100px;
   }
   
   /* Custom scrollbar for webkit */
