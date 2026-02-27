@@ -4,31 +4,43 @@ import { ExternalLink, Github } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
+      id: "01",
       title: "NeuroSense – Epileptic Seizure Prediction",
-      description: "AI-based medical system using Flask and React.js to predict epileptic seizures from EEG spectrograms. Implemented CNN and Hybrid CNN-BiLSTM models with real-time confidence visualization and PDF report generation.",
+      bullets: [
+        "AI-based medical system using Flask and React.js to predict epileptic seizures from EEG spectrograms.",
+        "Implemented CNN and Hybrid CNN-BiLSTM models.",
+        "Real-time confidence visualization and PDF report generation."
+      ],
       tech: ["Flask", "React.js", "CNN", "BiLSTM", "ML"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
       github: "https://github.com/SachinPattar8866",
       live: "#",
-      featured: true,
     },
     {
+      id: "02",
       title: "JobGenie AI – Career Assistant",
-      description: "AI-driven career platform with a React.js frontend and Go (Gin) backend to support resume optimization and job matching. Integrated Supabase PostgreSQL and Storage.",
+      bullets: [
+        "AI-driven career platform with a React.js frontend and Go (Gin) backend.",
+        "Resume optimization and job matching functionalities.",
+        "Integrated Supabase PostgreSQL and Storage for data management."
+      ],
       tech: ["React.js", "Go", "Gin", "PostgreSQL", "Supabase"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1000&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1000&auto=format&fit=crop",
       github: "https://github.com/SachinPattar8866",
       live: "#",
-      featured: true,
     },
     {
-      title: "Music Streaming App (YouTube Music Clone)",
-      description: "Full-stack music streaming application using Spring Boot, MongoDB, React.js. Integrated Jamendo API for music search and streaming. Implemented JWT-based authentication.",
+      id: "03",
+      title: "Music Streaming App",
+      bullets: [
+        "Full-stack music streaming application using Spring Boot, MongoDB, and React.js.",
+        "Integrated Jamendo API for extensive music search and streaming capabilities.",
+        "Implemented secure JWT-based authentication and user management."
+      ],
       tech: ["Spring Boot", "MongoDB", "React.js", "Jamendo API", "JWT"],
       image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop",
       github: "https://github.com/SachinPattar8866",
       live: "#",
-      featured: false,
     }
   ];
 
@@ -42,61 +54,54 @@ export default function Projects() {
           <div className="h-px bg-white/10 flex-grow max-w-xs"></div>
         </div>
 
-        <div className="space-y-32">
+        <div className="space-y-40">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.8 }}
-              className={`relative grid lg:grid-cols-12 gap-8 items-center ${
-                index % 2 !== 0 ? "" : "lg:flex-row-reverse"
+              className={`relative flex flex-col lg:flex-row items-center gap-12 ${
+                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Project Image */}
-              <div 
-                className={`lg:col-span-7 relative group rounded-2xl overflow-hidden glass border-white/10 shadow-2xl ${
-                  index % 2 !== 0 ? "lg:col-start-1" : "lg:col-start-6"
-                }`}
-              >
+              <div className="lg:w-1/2 relative group rounded-2xl overflow-hidden glass border-white/10 shadow-2xl">
                 <div className="absolute inset-0 bg-primary/20 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500 z-10"></div>
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-[300px] md:h-[400px] object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  className="w-full aspect-video object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                 />
               </div>
 
               {/* Project Content */}
-              <div 
-                className={`lg:col-span-6 relative z-20 ${
-                  index % 2 !== 0 ? "lg:col-start-7 lg:text-right" : "lg:col-start-1 lg:text-left"
-                }`}
-              >
-                <p className="text-secondary font-mono text-sm mb-2 font-medium">Featured Project</p>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 hover:text-primary transition-colors cursor-pointer">
+              <div className={`lg:w-1/2 space-y-6 ${index % 2 !== 0 ? "lg:text-right" : "lg:text-left"}`}>
+                <p className="text-secondary font-mono text-sm font-medium">Project {project.id}</p>
+                <h3 className="text-2xl md:text-3xl font-bold hover:text-primary transition-colors cursor-pointer">
                   {project.title}
                 </h3>
                 
-                <div className="glass-card p-6 md:p-8 rounded-2xl mb-6 shadow-xl relative text-left">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl pointer-events-none"></div>
-                  <p className="text-muted-foreground leading-relaxed relative z-10">
-                    {project.description}
-                  </p>
+                <div className="glass-card p-6 md:p-8 rounded-2xl shadow-xl">
+                  <ul className={`space-y-3 text-muted-foreground list-none ${index % 2 !== 0 ? "flex flex-col items-end" : ""}`}>
+                    {project.bullets.map((bullet, i) => (
+                      <li key={i} className="flex gap-3 text-sm md:text-base">
+                        {index % 2 === 0 && <span className="text-primary">▹</span>}
+                        <span>{bullet}</span>
+                        {index % 2 !== 0 && <span className="text-primary">◃</span>}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                <ul className={`flex flex-wrap gap-4 text-sm font-mono text-muted-foreground mb-8 ${
-                  index % 2 !== 0 ? "lg:justify-end justify-start" : "justify-start"
-                }`}>
+                <ul className={`flex flex-wrap gap-4 text-xs font-mono text-muted-foreground ${index % 2 !== 0 ? "lg:justify-end" : "justify-start"}`}>
                   {project.tech.map((tech, i) => (
                     <li key={i}>{tech}</li>
                   ))}
                 </ul>
 
-                <div className={`flex items-center gap-6 ${
-                  index % 2 !== 0 ? "lg:justify-end justify-start" : "justify-start"
-                }`}>
+                <div className={`flex items-center gap-6 ${index % 2 !== 0 ? "lg:justify-end" : "justify-start"}`}>
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors hover:-translate-y-1 transform duration-300">
                     <Github size={24} />
                   </a>

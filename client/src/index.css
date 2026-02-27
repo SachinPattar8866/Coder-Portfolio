@@ -83,17 +83,20 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased font-sans;
+    @apply bg-background text-foreground antialiased font-sans select-none;
     overflow-x: hidden;
   }
   
+  /* Allow selection in specific elements if needed */
+  input, textarea, [contenteditable="true"] {
+    @apply select-text;
+  }
+
   html {
     scroll-behavior: smooth;
-    /* Add scroll padding to prevent sections hiding under fixed navbar */
     scroll-padding-top: 100px;
   }
   
-  /* Custom scrollbar for webkit */
   ::-webkit-scrollbar {
     width: 8px;
   }
