@@ -83,13 +83,17 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground antialiased font-sans select-none;
+    @apply bg-background text-foreground antialiased font-sans select-none caret-transparent;
     overflow-x: hidden;
   }
   
-  /* Allow selection in specific elements if needed */
+  /* Reset cursor and caret for interactive and editable elements */
+  a, button, [role="button"], .interactive {
+    @apply cursor-pointer;
+  }
+
   input, textarea, [contenteditable="true"] {
-    @apply select-text;
+    @apply select-text caret-current cursor-text;
   }
 
   html {
