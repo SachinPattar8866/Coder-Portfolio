@@ -80,10 +80,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border caret-transparent!;
   }
   body {
-    @apply bg-background text-foreground antialiased font-sans select-none caret-transparent;
+    @apply bg-background text-foreground antialiased font-sans select-none;
     overflow-x: hidden;
   }
   
@@ -93,7 +93,7 @@
   }
 
   input, textarea, [contenteditable="true"] {
-    @apply select-text caret-current cursor-text;
+    @apply select-text caret-current! cursor-text;
   }
 
   html {
