@@ -151,14 +151,16 @@ export default function Hero() {
             <span className="font-medium text-sm">Available for work</span>
           </motion.div>
 
-          <motion.div 
-            animate={{ y: [5, -5, 5] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            className="absolute bottom-20 -right-10 glass px-6 py-3 rounded-2xl flex items-center gap-3"
-          >
-            <span className="text-2xl">🚀</span>
-            <span className="font-medium text-sm">Solved 90+ LeetCode</span>
-          </motion.div>
+          <a href="https://leetcode.com/u/Sachin_Pattar/" target="_blank" rel="noopener noreferrer" className="absolute bottom-20 -right-10 no-underline">
+            <motion.div 
+              animate={{ y: [5, -5, 5] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+              className="glass px-6 py-3 rounded-2xl flex items-center gap-3 cursor-pointer"
+            >
+              <span className="text-2xl">🚀</span>
+              <span className="font-medium text-sm">Solved 100+ LeetCode</span>
+            </motion.div>
+          </a>
         </motion.div>
       </div>
     </section>

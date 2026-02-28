@@ -12,7 +12,7 @@ export default function Projects() {
         "Real-time confidence visualization and PDF report generation."
       ],
       tech: ["Flask", "React.js", "CNN", "BiLSTM", "ML"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+      image: "https://www.simplypsychology.org/wp-content/uploads/EEG-768x486.jpeg",
       github: "https://github.com/SachinPattar8866",
       live: "#",
     },
@@ -38,7 +38,7 @@ export default function Projects() {
         "Implemented secure JWT-based authentication and user management."
       ],
       tech: ["Spring Boot", "MongoDB", "React.js", "Jamendo API", "JWT"],
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       github: "https://github.com/SachinPattar8866",
       live: "#",
     }
