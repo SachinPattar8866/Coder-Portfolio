@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, ExternalLink } from "lucide-react";
+import { ArrowRight, Github, Linkedin, ExternalLink, FileText } from "lucide-react";
 
 export default function Hero() {
   const text = "Hi, I'm Sachin";
   const subtitle = "Full Stack Developer | AI Enthusiast";
+  const resumeUrl = "/attached_assets/sachin-vp-resume_1772280191819.pdf";
 
   const container = {
     hidden: { opacity: 0 },
@@ -35,7 +36,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden" id="hero">
+    <section className="min-h-screen flex items-center justify-center pt-32 pb-20 relative overflow-hidden" id="hero">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center z-10">
         
         {/* Left Column: Text Content */}
@@ -55,13 +56,6 @@ export default function Hero() {
                   {char}
                 </motion.span>
               ))}
-              <motion.span
-                className="text-primary inline-block ml-2"
-                animate={{ opacity: [1, 0] }}
-                transition={{ repeat: Infinity, duration: 0.8 }}
-              >
-                |
-              </motion.span>
             </motion.h1>
             
             <motion.h2 
@@ -88,12 +82,14 @@ export default function Hero() {
             className="flex flex-wrap gap-4 pt-4"
           >
             <a 
-              href="#projects" 
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="glass px-8 py-4 rounded-xl font-medium flex items-center gap-2 hover:bg-white/10 transition-all hover:scale-105 active:scale-95 group"
-              data-testid="link-view-projects"
+              data-testid="link-resume-hero"
             >
-              View Projects 
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              <FileText size={18} />
+              View Resume
             </a>
             <a 
               href="#contact" 

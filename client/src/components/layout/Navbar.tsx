@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,18 +14,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
@@ -34,6 +21,8 @@ export default function Navbar() {
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
   ];
+
+  const resumeUrl = "/attached_assets/sachin-vp-resume_1772280191819.pdf";
 
   return (
     <motion.nav
@@ -48,8 +37,8 @@ export default function Navbar() {
         <div className={`flex items-center justify-between rounded-2xl px-6 py-3 transition-all duration-300 ${
           scrolled ? "glass shadow-lg" : "bg-transparent"
         }`}>
-          <a href="#" className="text-2xl font-bold font-mono tracking-tighter">
-            Sachin<span className="text-primary">.</span>
+          <a href="#" className="text-xl font-bold font-mono tracking-tighter">
+            My Portfolio<span className="text-primary">.</span>
           </a>
 
           {/* Desktop Nav */}
@@ -64,23 +53,28 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-white/10 transition-colors"
-              data-testid="button-toggle-theme"
+            <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 hover:bg-white/10 transition-all"
+              data-testid="link-resume"
             >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+              <FileText size={16} />
+              Resume
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full hover:bg-white/10 transition-colors"
+             <a
+              href={resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-muted-foreground"
             >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+              <FileText size={20} />
+            </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-foreground"
