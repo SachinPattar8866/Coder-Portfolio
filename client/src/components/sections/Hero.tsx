@@ -4,7 +4,7 @@ import { ArrowRight, Github, Linkedin, ExternalLink, FileText } from "lucide-rea
 export default function Hero() {
   const text = "Hi, I'm Sachin";
   const subtitle = "Full Stack Developer | AI Enthusiast";
-  const resumeUrl = "/attached_assets/sachin-vp-resume_1772280191819.pdf";
+  const resumeUrl = "/assets/resume.pdf";
 
   const container = {
     hidden: { opacity: 0 },
@@ -134,9 +134,9 @@ export default function Hero() {
           >
             <div className="w-full h-full rounded-2xl overflow-hidden bg-zinc-800 relative">
                <img 
-                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+                 src="/assets/profile.jpeg" 
                  alt="Sachin Profile" 
-                 className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                 className="w-full h-full object-cover transition-all duration-700"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent mix-blend-multiply"></div>
             </div>
